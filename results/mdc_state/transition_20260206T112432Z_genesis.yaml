@@ -1,0 +1,52 @@
+kind: state_transition
+spec: MDC-V2-INFINITE-COORDINATION
+system_id: oram
+domain: privacy-preserving-ml
+shard_id: oram/project
+operator: GENESIS
+from_snapshot_hash: null
+to_snapshot_hash: sha256:08422c1767730620eaa3d1f6b0b03305c4656aebc9dc8a4eded260f9c6c71b4e
+delta:
+  facts:
+    project_root: /Users/croberts/oram
+    has_src: true
+    has_experiments: true
+    has_data: true
+    files:
+    - path: README.md
+      exists: true
+      size: 2865
+    - path: requirements.txt
+      exists: true
+      size: 405
+    - path: src/oram_storage.py
+      exists: true
+      size: 8533
+    - path: src/oram_dataloader.py
+      exists: true
+      size: 7451
+    - path: src/oram_trainer.py
+      exists: true
+      size: 12866
+    - path: experiments/run_oram.py
+      exists: true
+      size: 1982
+    - path: experiments/run_baseline.py
+      exists: true
+      size: 1888
+  artifacts: []
+checks:
+  preconditions: []
+  hard_constraints: []
+  postconditions:
+  - snapshot_hash is content-addressed from workspace_facts
+validation_model:
+  uri: validate://router/v2
+  purity: true
+  acceptance: ALL
+merge_model:
+  uri: merge://router/v2
+  serialization: per_shard
+status: GENESIS
+reason: Initial MDC snapshot for the oram project workspace.
+timestamp: '2026-02-06T11:24:32.105809+00:00'

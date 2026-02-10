@@ -1,0 +1,107 @@
+---
+kind: state_transition
+version: mdc-v2
+
+shard:
+  system_id: "oram-local"
+  domain: "ml-experiments"
+  shard_id: "repo-root"
+
+time:
+  proposed_at: "2026-02-06T03:05:00-08:00"
+  operator_id: "assistant-gpt-5.1"
+
+coordination:
+  primitive: "state_transition"
+  from_snapshot_hash: "GENESIS"
+  to_snapshot_hash: "sha256:PLACEHOLDER_TO_COMPUTE"
+  mode: "CANDIDATE"
+
+delta:
+  facts:
+    added:
+      - id: "FACT-ORAM-001"
+        description: "Register ORAM-Integrated PyTorch Training Baseline repo as an MDC-managed shard."
+    updated: []
+    removed: []
+  constraints:
+    added: []
+    updated: []
+    removed: []
+  artifacts:
+    added:
+      - path: "README.md"
+        kind: "file"
+        hash:
+          algo: "sha256"
+          value: "PLACEHOLDER"
+          status: "UNCOMPUTED"
+      - path: "requirements.txt"
+        kind: "file"
+        hash:
+          algo: "sha256"
+          value: "PLACEHOLDER"
+          status: "UNCOMPUTED"
+      - path: "src"
+        kind: "directory"
+        hash:
+          algo: "sha256"
+          value: "PLACEHOLDER"
+          status: "UNCOMPUTED"
+      - path: "experiments"
+        kind: "directory"
+        hash:
+          algo: "sha256"
+          value: "PLACEHOLDER"
+          status: "UNCOMPUTED"
+      - path: "data"
+        kind: "directory"
+        hash:
+          algo: "sha256"
+          value: "PLACEHOLDER"
+          status: "UNCOMPUTED"
+      - path: "results"
+        kind: "directory"
+        hash:
+          algo: "sha256"
+          value: "PLACEHOLDER"
+          status: "UNCOMPUTED"
+    updated: []
+    removed: []
+
+checks:
+  preconditions:
+    - id: "PRE-ORAM-001"
+      description: "No prior snapshot exists for (system_id=oram-local, domain=ml-experiments, shard_id=repo-root)."
+  invariants:
+    - id: "INV-ORAM-001"
+      description: "Snapshot must describe at most one shard and not reference external hidden state."
+  postconditions:
+    - id: "POST-ORAM-001"
+      description: "Shard repo-root has an initial snapshot referencing the Oram repo root contents."
+  validation_mode: "ALL"
+
+status:
+  decision: "PENDING"
+  reason: null
+  loops:
+    open: []
+    closed: []
+  conflict:
+    detected: false
+    reason: null
+    scope:
+      facts: []
+      constraints: []
+      loops: []
+      artifacts: []
+      topology: []
+
+metadata:
+  human_readable_summary: "GENESIS transition onboarding the Oram ORAM-Integrated PyTorch Training Baseline repo into the MDC-V2 coordination substrate."
+  tags:
+    - "GENESIS"
+    - "oram"
+    - "ml"
+    - "cifar-10"
+---

@@ -1,8 +1,22 @@
+# Environment
+.env
 venv/
-data/cifar-10-batches-py/
-data/cifar-10-python.tar.gz
+.venv/
+
+# Python
 __pycache__/
 *.pyc
+
+# Data (large binary files)
+data/cifar-10-batches-py/
+data/cifar-10-python.tar.gz
+
+# Runtime artifacts
 results/logs/
 results/.experiment_lock
+*.pth
+
+# IDE / OS
+.cursor/
 .DS_Store
+node_modules/

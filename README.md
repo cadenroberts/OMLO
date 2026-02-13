@@ -1,3 +1,11 @@
+# Privacy-Preserving Machine Learning Infrastructure: Scalable Oblivious Computation for Enterprise AI Systems
+
+I propose Oblivious ML-Ops (OMLO), a framework for privacy-preserving machine learning infrastructure that enables training and serving of ML models while hiding data-dependent access
+patterns. This research extends recent work on oblivious computation and searchable encryption
+to address metadata leakage in ML systems—a gap left open by federated learning and differential
+privacy approaches, which protect data values but not access patterns. For CSE239A, I will characterize the overhead of applying ORAM to ML training workloads, establishing a baseline for the
+optimizations proposed in the broader research vision.
+
 # ORAM-Integrated PyTorch Training
 
 Quantifies computational and I/O overhead when integrating Path ORAM into GPU-backed PyTorch training workflows.

@@ -52,7 +52,6 @@ flowchart TB
 | `run.sh` | Shell orchestrator: venv setup, phased experiments, OS-level tracing, smoke tests |
 | `requirements.txt` | Python dependencies (torch, pyoram, sklearn, matplotlib, xgboost, etc.) |
 | `mypy.ini` | Mypy configuration: per-module error suppression for strict mode |
-| `.gitlab-ci.yml` | CI: runs `./run.sh smoke` on Python 3.10 |
 | `reports/` | Paper LaTeX source (LLNCS class) |
 
 ## Entry Points
